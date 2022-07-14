@@ -21,15 +21,11 @@
     <img id="image" class="rounded-circle" width="100" height="100" />
     <p>Email</p>
     <p id="email"></p>
-    <button type="button" class="btn btn-danger" onclick="signOut();">Sign Out</button>
+    <div class="g_id_signout">Sign Out</div>
 </div>
-  <!-- Ban login GG 1 -->
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-   <!-- Ban login GG 2 -->
+   <!-- Ban login GG 2 Sign In With Google button-->
    <div id="buttonDiv"></div> 
-     <!-- <div class="g_id_signout">Sign Out</div> -->
-
 
 <script>
   
@@ -60,17 +56,20 @@
     $(".data").css("display", "block");
     $(".g-signin2").css("display", "none");
   }
-//Log Google 2
+
+
+//Log Google 2 Sign In With Google button
   window.onload = function () {
     google.accounts.id.initialize({
        client_id: "902204154871-d7c9js1v4q98ocmrln31ernj3oheb4e0.apps.googleusercontent.com",
-      //client_id: "902204154871-d7c9js1v4q98ocmrln31ernj3oheb4e0.apps.googleusercontent.com",
       callback: handleCredentialResponse
     });
     google.accounts.id.renderButton(
       document.getElementById("buttonDiv"),
       { theme: "outline", size: "large" }  // customization attributes
     );
+    
+    // Ban login GG 1 
     google.accounts.id.prompt(); // also display the One Tap dialog
   }
 
@@ -79,10 +78,6 @@
   const button = document.getElementById('g_id_signout');
     button.onclick = () => {
       google.accounts.id.disableAutoSelect();
-
-
-
-
     }
 </script>
     <meta name="google-signin-client_id" content="902204154871-d7c9js1v4q98ocmrln31ernj3oheb4e0.apps.googleusercontent.com">
@@ -90,12 +85,10 @@
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://apis.google.com/js/api.js" async defer></script>
 
-
-    <script src="index.js" async defer></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 </div>
 </div>
 </body>
