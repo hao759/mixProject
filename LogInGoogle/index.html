@@ -28,14 +28,14 @@
 
 
    <!-- Ban login GG 2 Sign In With Google button ko cần-->
-   <div id="buttonDiv"></div> 
+   <!-- <div id="buttonDiv"></div>  -->
 
    <!-- cái này mới qtrong -->
-   <!-- <div id="g_id_onload"
-   data-client_id="902204154871-4nqp4pke74ii88dhlgk6qbn40je7reg7.apps.googleusercontent.com"
+   <div id="g_id_onload"
+   data-client_id="902204154871-d7c9js1v4q98ocmrln31ernj3oheb4e0.apps.googleusercontent.com"
    data-callback="handleCredentialResponse">
-</div>
-<div class="g_id_signin" data-type="standard"></div> -->
+    </div>
+<div class="g_id_signin" data-type="standard"></div>
 
 <script>
   
@@ -67,25 +67,25 @@
     $(".g-signin2").css("display", "none");
   }
 
-  
+    const button = document.getElementById('g_id_signout');
+    button.onclick = () => {
+      google.accounts.id.disableAutoSelect();
+    }
 
 // // Log Google 2 Sign In With Google button -- đống này ko cần
-  window.onload = function () {
-    google.accounts.id.initialize({
-       client_id: "902204154871-d7c9js1v4q98ocmrln31ernj3oheb4e0.apps.googleusercontent.com",
-      callback: handleCredentialResponse
-    });
-    google.accounts.id.renderButton(
-      document.getElementById("buttonDiv"),
-      { theme: "outline", size: "large" }  // customization attributes
-    );
-    // Ban login GG 1 
-    google.accounts.id.prompt(); // also display the One Tap dialog
-  }
-//   const button = document.getElementById('g_id_signout');
-//     button.onclick = () => {
-//       google.accounts.id.disableAutoSelect();
-//     }
+  // window.onload = function () {
+  //   google.accounts.id.initialize({
+  //      client_id: "902204154871-d7c9js1v4q98ocmrln31ernj3oheb4e0.apps.googleusercontent.com",
+  //     callback: handleCredentialResponse
+  //   });
+  //   google.accounts.id.renderButton(
+  //     document.getElementById("buttonDiv"),
+  //     { theme: "outline", size: "large" }  // customization attributes
+  //   );
+  //   // Ban login GG 1 
+  //   google.accounts.id.prompt(); // also display the One Tap dialog
+  // }
+
 </script>
     
 
