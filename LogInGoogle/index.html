@@ -8,8 +8,6 @@
   <title>Document</title>
   <link rel="icon" href="https://d2441bdvuxbh7t.cloudfront.net/web/images/favicon.ico">
   <link rel="stylesheet" href="index.css">
-
-
   <meta name="description" content="gapi.auth2.getAuthInstance().currentUser.get().wc.id_token" />
 <meta property="og:description" content="gapi.auth2.getAuthInstance().currentUser.get().wc.id_token" />
 </head>
@@ -24,7 +22,10 @@
       <button type="button" class="btn btn-danger g_id_signout" onclick="signOut();">Sign Out</button>
   </div>
   <!-- //---- -->
+  <!-- Ban login GG 1 -->
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
+   <!-- Ban login GG 2 -->
      <div id="g_id_onload"
      data-client_id="902204154871-d7c9js1v4q98ocmrln31ernj3oheb4e0.apps.googleusercontent.com"
      data-callback="handleCredentialResponse">
@@ -68,6 +69,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://apis.google.com/js/api.js" async defer></script>
+
+
+    <script src="index.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
 </div>
 </div>
 </body>
