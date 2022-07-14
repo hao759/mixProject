@@ -60,7 +60,10 @@
     $(".data").css("display", "block");
     $(".g-signin2").css("display", "none");
   }
-
+  const button = document.getElementById('g_id_signout');
+    button.onclick = () => {
+      google.accounts.id.disableAutoSelect();
+    }
 
 //Log Google 2 Sign In With Google button -- đống này ko cần
   window.onload = function () {
@@ -77,10 +80,7 @@
   }
 
 
-  const button = document.getElementById('g_id_signout');
-    button.onclick = () => {
-      google.accounts.id.disableAutoSelect();
-    }
+  
 </script>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
