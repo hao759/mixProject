@@ -24,7 +24,7 @@
   <p id="ID"></p>
   <p>Name :</p>
   <p id="name"></p>
-   <p>Image</p>
+  <p>Image</p>
   <img style="border-radius: 50%" id="image" class="rounded-circle" width="100" height="100" />
   <p>Email</p>
   <p id="email"></p>
@@ -105,7 +105,7 @@
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
-    FB.api('/me', function(response) {
+    FB.api('/me', { locale: 'en_US', fields: 'name, email' }, function(response) {
     // console.log(JSON.stringify(response));
     console.log(response);
     const obj=response;
