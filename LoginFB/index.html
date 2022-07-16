@@ -6,9 +6,9 @@
 <link rel="icon" href="https://res.cloudinary.com/dhzi2feeu/image/upload/v1657883592/facebook_pcigd6.png">
 </head>
 <body>
-  <!-- <div id="fb-root"></div> -->
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v14.0&appId=2368637973277229&autoLogAppEvents=1" nonce="r7WbDpkJ"></script>
   <!-- Bước 3: Đặt mã này ở bất cứ đâu mà bạn muốn plugin xuất hiện trên trang. -->
+  <div id="fb-root"></div>
  
 
 <div class="data">
@@ -34,6 +34,9 @@
 
 <fb:login-button class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false"  data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();" style="margin-top: 50px;">
 </fb:login-button>
+
+<!-- <fb:login-button  scope="public_profile,email" onlogin="checkLoginState();" style="margin-top: 50px;">
+</fb:login-button> -->
 
 <!-- <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false"  data-use-continue-as="false"
 ></div> -->
