@@ -3,7 +3,6 @@
 <head>
 <title>Facebook Login JavaScript Example</title>
 <meta charset="UTF-8">
-<!-- https://i.imgur.com/3O7IBii.png -->
 <link rel="icon" href="https://res.cloudinary.com/dhzi2feeu/image/upload/v1657883592/facebook_pcigd6.png">
 </head>
 <body>
@@ -24,6 +23,32 @@
   <!--<button id="g_id_signout">Sign Out</button> -->
 </div>
 
+
+
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<fb:login-button class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false"  data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();" style="margin-top: 50px;">
+</fb:login-button>
+
+<!-- <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false"  data-use-continue-as="false"
+></div> -->
+
+
+
+<div style="margin-top: 20px;" id="status">
+</div>
+
+<div style="margin-top: 20px;"
+class="fb-like"
+data-share="true"
+data-width="450"
+data-show-faces="true">
+</div>
 
 
 <script>
@@ -83,8 +108,6 @@
   //
   // These three cases are handled in the callback function.
 
-
-
   
 
   // Load the SDK asynchronously
@@ -109,30 +132,6 @@
 });//https://developers.facebook.com/docs/facebook-login/web/accesstokens
   }
 </script>
-<!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
-
-<fb:login-button class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false"  data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();" style="margin-top: 50px;">
-</fb:login-button>
-
-<!-- <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false"  data-use-continue-as="false"
-></div> -->
-
-
-
-<div id="status">
-</div>
-
-<div style="margin-top: 20px;"
-class="fb-like"
-data-share="true"
-data-width="450"
-data-show-faces="true">
-</div>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
