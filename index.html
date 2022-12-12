@@ -1,39 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="icon" href="https://res.cloudinary.com/dhzi2feeu/image/upload/v1657870618/saringan_hfdc1c.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/dhzi2feeu/image/upload/v1657870618/saringan_hfdc1c.ico"
+    />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mix Project</title>
     <style>
-        a{
-
-
-            background-color: aqua;
-            font-size: 30px;
-            padding: 20px;
-            text-decoration: none;
-        }
-        li{
-            margin: 40px;
-
-        }
+      a {
+        background-color: aqua;
+        font-size: 30px;
+        padding: 20px;
+        text-decoration: none;
+      }
+      li {
+        margin: 40px;
+      }
     </style>
-</head>
-<body>
-    <iframe width="1186" height="480" src="https://www.youtube.com/embed/oI5KcRgB5oQ" title="Naruto vs Doctor Strange" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </head>
+  <body>
+    <iframe
+      width="1186"
+      height="480"
+      src="https://www.youtube.com/embed/oI5KcRgB5oQ"
+      title="Naruto vs Doctor Strange"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <!-- //===== -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "102214835997138");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    //
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        window.FB.init({
+          xfbml: true,
+          version: "v15.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
+<!-- //================== -->
+
     <ul>
-        <li><a href="dogAPIbackground/index.html">Dog API background</a></li>
-        <li><a href="/dogAPIbackground/index.html">Dog API ko bam dc</a></li>
-        <li><a href="superHeroAPI/index.html">Get API Hero</a></li>
-        <li><a href="LogInGoogle/index.html"> Log in Google </a></li>
-        <li><a href="LoginFB/index.html"> Log in Facebook </a></li>
-        <!-- <li></li> -->
+      <li><a href="dogAPIbackground/index.html">Dog API background</a></li>
+      <li><a href="/dogAPIbackground/index.html">Dog API ko bam dc</a></li>
+      <li><a href="superHeroAPI/index.html">Get API Hero</a></li>
+      <li><a href="LogInGoogle/index.html"> Log in Google </a></li>
+      <li><a href="LoginFB/index.html"> Log in Facebook </a></li>
+      <!-- <li></li> -->
     </ul>
-
-
-    
-</body>
+  </body>
 </html>
